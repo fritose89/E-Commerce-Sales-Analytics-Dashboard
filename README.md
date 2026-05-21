@@ -85,3 +85,9 @@ UCI Online Retail dataset
   - cancelled_orders_summary: condensed metrics on just cancelled order processed separately
 - Created a finalized version of the sql04 file to show the progress made between the first and final draft
 - Renamed the sql04 draft and finalized file to show they are data summaries and not actual analysis queries
+
+### 5/21
+- Started creation of PowerBI dashboard views
+- Created the following views:
+  - dashboard_sales_overview: overall fact table for visuals, used to create slicers
+  - dashboard_kpi_summary: totals for creating useful KPI cards 
