@@ -91,3 +91,22 @@ UCI Online Retail dataset
 - Created the following views:
   - dashboard_sales_overview: overall fact table for visuals, used to create slicers
   - dashboard_kpi_summary: totals for creating useful KPI cards 
+
+### 5/23
+- Made some edits to the sales_overview by removing some of the unnecessary flags preset by the sales_overall view such as IsCancelled
+- Added some new columns to the kpi_summary including Average_Units_Per_Order, Missing_CustomerID_Row_Count, and Percent_Missing_CustomerID
+- Added an extra flag check to confirm that a customer has an ID when calculating the number of unique customers for the kpi_summary view
+- Finished creating sql05 today along with the above edits
+- Now sql05 consists of:
+  - dashboard_sales_overview: overall fact table for visuals, used to create slicers
+  - dashboard_kpi_summary: totals for creating useful KPI cards 
+  - dashboard_monthly_sales: monthly sales trends
+  - dashboard_geographic_performance: sales for each country and ranking them by revenue and percent of total revenue
+  - dashboard_product_performace: product based sales trends and similar ranking to geographic for product revenue and units sold
+  - dashboard_customer_performance: customer sales trends similar ranking to the previous two based on customer revenue includes a simple typing column based on following rules:
+    - One-Time Customer: when a customer has just ordered once
+    - Repeat Customer: when a customer has ordered more than once
+    - High-Value Customer: when the revenue generated from a customer is in the 1st percentile
+  - dashboard_cancellation_impact: overall revenue effects of cancellations
+  - dashboard_data_quality: overview of which data is used where and which data is throw out during the cleaning process
+
