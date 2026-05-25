@@ -1,3 +1,4 @@
+USE retail_sales_analytics;
 GO
 
 CREATE OR ALTER VIEW dbo.dashboard_sales_overview AS
@@ -15,7 +16,7 @@ SELECT
 	Revenue,
 	NullOrMissingID
 FROM
-	retail_sales_analytics.dbo.sales_overall
+	dbo.sales_overall;
 
 GO
 
@@ -32,7 +33,7 @@ SELECT
 	SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) AS Missing_CustomerID_Row_Count,
 	100.0 * SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) / COUNT(*) AS Percent_Missing_CustomerID
 FROM
-	retail_sales_analytics.dbo.sales_overall
+	dbo.sales_overall;
 
 GO
 
@@ -45,7 +46,7 @@ SELECT
 	Total_Orders,
 	Avg_Revenue_Per_Order
 FROM
-	retail_sales_analytics.dbo.monthly_sales_summary
+	dbo.monthly_sales_summary;
 
 GO
 
@@ -60,7 +61,7 @@ SELECT
 	Total_Revenue / SUM(Total_Revenue) OVER() AS Revenue_Percent_Of_total,
 	RANK() OVER(ORDER BY Total_Revenue DESC) AS Revenue_Rank
 FROM
-	retail_sales_analytics.dbo.geographic_sales_summary
+	dbo.geographic_sales_summary;
 
 GO
 
@@ -76,7 +77,7 @@ SELECT
 	RANK() OVER(ORDER BY Total_Revenue DESC) AS Product_Revenue_Rank,
 	RANK() OVER(ORDER BY Total_Units_Sold DESC) AS Product_Units_Rank
 FROM
-	retail_sales_analytics.dbo.product_sales_summary
+	dbo.product_sales_summary;
 
 GO
 
@@ -97,7 +98,7 @@ SELECT
 		WHEN NTILE(10) OVER(ORDER BY Total_Revenue DESC) = 1 THEN 'High-Value Customer'
 	END AS Customer_Type
 FROM
-	retail_sales_analytics.dbo.customer_level_sales_summary
+	dbo.customer_level_sales_summary;
 
 GO
 
@@ -110,7 +111,7 @@ SELECT
 	Total_Revenue_Lost,
 	ABS(Total_Revenue_Lost) AS Revenue_Lost_Positive
 FROM
-	retail_sales_analytics.dbo.cancelled_orders_summary
+	dbo.cancelled_orders_summary;
 
 GO
 
@@ -128,6 +129,6 @@ SELECT
 	100.0 * SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) / COUNT(*) AS Percent_Missing_CustomerID
 
 FROM
-	retail_sales_analytics.dbo.sales_clean
+	dbo.sales_clean;
 
 GO

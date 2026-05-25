@@ -110,3 +110,6 @@ UCI Online Retail dataset
   - dashboard_cancellation_impact: overall revenue effects of cancellations
   - dashboard_data_quality: overview of which data is used where and which data is throw out during the cleaning process
 
+### 5/25
+- Made some minor alterations to sql05 by placing the retail_sales_analytics USE clause at the top of the query this allowed for the views to actually populated in the SSMS Object Explorer window. I realized that SQL needs to be instructed to use a specific database explictly
+-
