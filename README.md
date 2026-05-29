@@ -112,4 +112,12 @@ UCI Online Retail dataset
 
 ### 5/25
 - Made some minor alterations to sql05 by placing the retail_sales_analytics USE clause at the top of the query this allowed for the views to actually populated in the SSMS Object Explorer window. I realized that SQL needs to be instructed to use a specific database explictly
--
+
+### 5/28
+- Began creation of PowerBI dashboard with KPI cards representing:
+  - Total Revenue
+  - Total Orders
+  - Total Units Sold
+  - Unique Customers
+  - Average Revenue Per Order
+- Will be adding a monthly sales line graph and a couple slicers
