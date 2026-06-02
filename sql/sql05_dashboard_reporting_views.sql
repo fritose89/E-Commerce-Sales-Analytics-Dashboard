@@ -7,6 +7,7 @@ SELECT
 	InvoiceDate,
 	YEAR(InvoiceDate) AS Sales_Year,
 	MONTH(InvoiceDate) AS Sales_Month,
+	DATEFROMPARTS(YEAR(InvoiceDate), MONTH(InvoiceDate), 1) AS Month_Start_Date,
 	CustomerID,
 	Country,
 	StockCode,
