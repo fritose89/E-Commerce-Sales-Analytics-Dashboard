@@ -126,4 +126,11 @@ UCI Online Retail dataset
 - Beginning creation of line and bar graphs on dashboard
 - I noticed when visualizing the product breakdown that postage, manual, and dotcom postage appear in 3 of the top 10 products sold by revenue so I will be removing them in the visualization in PowerBI and making a note of this in the rules
 - Added A line chart displaying the total revenue by month as well as a bar graph for the top 10 products sold
-- Will be editing titles and themeing later 
+- Will be editing titles and themeing later
+
+### 6/01
+- Created a filter in PowerBI to remove the Postage and Manual products from the top 10 products by revenue chart
+- Refined titles in KPI cards and charts
+- Created top 10 product and country charts on executive page
+- Added filters to the top 10 country and product charts to only show the top 10 by revenue rank
+- Had to add the top 13 revenue ranks in the product chart due to postage and manuals accounting for 3 of the top 10 positions
