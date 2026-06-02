@@ -135,3 +135,7 @@ UCI Online Retail dataset
 - Added filters to the top 10 country and product charts to only show the top 10 by revenue rank
 - Had to add the top 13 revenue ranks in the product chart due to postage and manuals accounting for 3 of the top 10 positions
 - This might be a first draft of the executive page in terms of theming and color choice
+
+### 6/02
+- Added column to sql05 dashboard_sales_overview that displays the first day of the month for each sale called Month_Start_Date
+- 
