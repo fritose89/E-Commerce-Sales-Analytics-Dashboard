@@ -97,8 +97,11 @@ SELECT
 	CASE
 		WHEN Total_Orders = 1 THEN 'One-Time Customer'
 		WHEN Total_Orders > 1 THEN 'Repeat Customer'
+	END AS Customer_Order_Frequency,
+	CASE
 		WHEN NTILE(10) OVER(ORDER BY Total_Revenue DESC) = 1 THEN 'High-Value Customer'
-	END AS Customer_Type
+		ELSE 'Standard Customer'
+	END AS Customer_Value_Type
 FROM
 	dbo.customer_level_sales_summary;
 

@@ -143,4 +143,11 @@ UCI Online Retail dataset
 
 ### 6/04
 - Added same Month_Start_Date column from sales_overview to dashboard_monthly_sales
-- 
+- Edited sql05 customer_type and broke this column into 2
+  - Customer_Order_Frequency: categorizes customers into one-time and repeat customers
+  - Customer_Value_Type: categorizes customers into high-value and standard customers based on if the revenue generated from that customer is within the top percentile of a decile
+- Added four basic slicers for page 2:
+  - Month_Start_Date
+  - Country
+  - Customer_Value_Type
+  - Description
