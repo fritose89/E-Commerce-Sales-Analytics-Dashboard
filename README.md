@@ -138,4 +138,9 @@ UCI Online Retail dataset
 
 ### 6/02
 - Added column to sql05 dashboard_sales_overview that displays the first day of the month for each sale called Month_Start_Date
+- Edited the titles of the pages
+- Created basic slicer for Product & Customer Analysis page 2
+
+### 6/04
+- Added same Month_Start_Date column from sales_overview to dashboard_monthly_sales
 - 

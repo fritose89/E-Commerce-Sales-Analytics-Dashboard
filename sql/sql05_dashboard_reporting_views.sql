@@ -42,6 +42,7 @@ CREATE OR ALTER VIEW dbo.dashboard_monthly_sales AS
 SELECT
 	Sales_Year,
 	Sales_Month,
+	DATEFROMPARTS(Sales_Year, Sales_Month, 1) AS Month_Start_Date,
 	Total_Monthly_Revenue,
 	Total_Units_Sold,
 	Total_Orders,
