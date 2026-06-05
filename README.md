@@ -151,3 +151,10 @@ UCI Online Retail dataset
   - Country
   - Customer_Value_Type
   - Description
+- Created 4 DAX queries to allow the slicers to work:
+  - Filtered Revenue: Adds revenue column
+  - Filtered Orders: Counts number of orders based on distinct values of the InvoiceNo
+  - Filtered Units Sold: Adds quantity column
+  - Filtered Customers: Counts number of customers and assigns a flag if there is not a CustomerID
+- Added KPI cards to display the data filtered by the slicers
+- I will be refining this page over the course of the next couple days
