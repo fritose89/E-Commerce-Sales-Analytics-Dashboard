@@ -166,3 +166,10 @@ UCI Online Retail dataset
 - Changed Date slicer to between to be able to have a higher level of precision
 - Added a bar chart representing the top products sold based on the parameters of the slicers
 
+### 6/06
+- Added a DAX measure NotProduct to the dashboard_sales_overview view that flags rows if a product description is ("POSTAGE", "MANUAL", "DOTCOM POSTAGE") these are removed from the top products barchart
+- Top products bar chart on page 2 is now filtered by the top 10 using description instead of filtering out the POSTAGE MANUAL and DOTCOM POSTAGE by themselves
+- Created title for barchart now Top 10 Products by Revenue working as it should
+
+
+
