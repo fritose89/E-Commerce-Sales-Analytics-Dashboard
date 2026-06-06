@@ -158,3 +158,11 @@ UCI Online Retail dataset
   - Filtered Customers: Counts number of customers and assigns a flag if there is not a CustomerID
 - Added KPI cards to display the data filtered by the slicers
 - I will be refining this page over the course of the next couple days
+
+### 6/05
+- Updated Customer_Value_Type slicer to not list Blank as a filter option, Blank represented the sales that did not include a customerID found in the dashboard_sales_overall view this is mentioned in the title of the slicer
+- Fixed format for KPI cards on page 2 by adding currency representations and adjusting the number of decimal places
+- Edited titles for slicers
+- Changed Date slicer to between to be able to have a higher level of precision
+- Added a bar chart representing the top products sold based on the parameters of the slicers
+
