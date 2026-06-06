@@ -170,6 +170,9 @@ UCI Online Retail dataset
 - Added a DAX measure NotProduct to the dashboard_sales_overview view that flags rows if a product description is ("POSTAGE", "MANUAL", "DOTCOM POSTAGE") these are removed from the top products barchart
 - Top products bar chart on page 2 is now filtered by the top 10 using description instead of filtering out the POSTAGE MANUAL and DOTCOM POSTAGE by themselves
 - Created title for barchart now Top 10 Products by Revenue working as it should
+- Added another page for cancellation impact after the product and customer analysis page
+- Created bar chart on page 2 for top 10 customers by revenue that filters using the MissingCustomerID flag
+- Added title and data formatting for top 10 customers by revenue
 
 
 
