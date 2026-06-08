@@ -174,5 +174,10 @@ UCI Online Retail dataset
 - Created bar chart on page 2 for top 10 customers by revenue that filters using the MissingCustomerID flag
 - Added title and data formatting for top 10 customers by revenue
 
-
+### 6/08
+- Updated bar and line charts on page one to have revenue represented as a currency
+- Added a line graph of revenue by month that is filtered with the slicers on page 2
+- Added a table that displays more details about the top 10 customers filtered in the top 10 customers by revenue bar chart on page 2
+- Updated titles of charts on page 2
+- Completed page 2
 
