@@ -110,13 +110,19 @@ GO
 CREATE OR ALTER VIEW dbo.dashboard_cancellation_impact AS 
 SELECT
 	InvoiceNo,
-	CustomerID,
-	Country,
-	Total_Cancelled_Units,
-	Total_Revenue_Lost,
-	ABS(Total_Revenue_Lost) AS Revenue_Lost_Positive
+    InvoiceDate,
+    DATEFROMPARTS(YEAR(InvoiceDate), MONTH(InvoiceDate), 1) AS Month_Start_Date,
+    YEAR(InvoiceDate) AS Sales_Year,
+    MONTH(InvoiceDate) AS Sales_Month,
+    CustomerID,
+    Country,
+    StockCode,
+    Description,
+    ABS(Quantity) AS Cancelled_Units,
+    UnitPrice,
+    ABS(Revenue) AS Revenue_Lost
 FROM
-	dbo.cancelled_orders_summary;
+    dbo.cancelled_sales;
 
 GO
 

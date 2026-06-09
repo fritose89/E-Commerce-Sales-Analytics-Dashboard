@@ -180,4 +180,5 @@ UCI Online Retail dataset
 - Added a table that displays more details about the top 10 customers filtered in the top 10 customers by revenue bar chart on page 2
 - Updated titles of charts on page 2
 - Completed page 2
+- Started work on page 3 cancellation impact I am going to alter the dashboard_cancellation_impact view in SSMS to pull from the cancelled_sales view instead of the cancelled_sales_summary this will allow for PowerBI to have access to a greater level of detail
 
