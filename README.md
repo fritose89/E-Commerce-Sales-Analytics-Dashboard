@@ -182,3 +182,18 @@ UCI Online Retail dataset
 - Completed page 2
 - Started work on page 3 cancellation impact I am going to alter the dashboard_cancellation_impact view in SSMS to pull from the cancelled_sales view instead of the cancelled_sales_summary this will allow for PowerBI to have access to a greater level of detail
 
+### 6/12
+- Began work on page 3 cancellation impact page by first creating 4 DAX queries:
+  - Average Revenue Lost per Order
+  - Number of Cancelled Orders
+  - Total Cancelled Units
+  - Total Revenue Lost
+- Created 4 KPI cards on page 3 that correspond with the aforementioned DAX queries
+- Added a bar graph that shows the top 10 countries total revenue lost from cancellations
+- Added another bar graph that shows the top 10 customers total revenue lost from cancellations, I filtered out any cancellations without a customerID for this graph
+- Added a line graph that shows revenue lost per month
+- All of the visuals on page 3 are filtered with 3 slicers:
+  - Dates
+  - Country
+  - CustomerID
+ 
