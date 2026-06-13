@@ -132,12 +132,13 @@ SELECT
 	SUM(CASE WHEN IsCancelled = 0 AND NegativeQuantityNotCancelled = 0 AND Quantity > 0 AND UnitPrice > 0 THEN 1 ELSE 0 END) AS Valid_Sales_Rows, --Also the Rows included in revenue
 	SUM(CASE WHEN IsCancelled = 1 THEN 1 ELSE 0 END) AS Cancelled_Rows,
 	SUM(CASE WHEN NegativeQuantityNotCancelled = 1 THEN 1 ELSE 0 END) AS Negative_Quantity_Not_Cancelled_Rows,
-	SUM(CASE WHEN UnitPrice < 0 THEN 1 ELSE 0 END) AS Invalid_UnitPrice_Rows,
+	SUM(CASE WHEN UnitPrice <= 0 THEN 1 ELSE 0 END) AS Invalid_UnitPrice_Rows,
 	SUM(CASE WHEN IsCancelled = 1 THEN 1 ELSE 0 END) + SUM(CASE WHEN NegativeQuantityNotCancelled = 1 THEN 1 ELSE 0 END) + SUM(CASE WHEN UnitPrice < 0 THEN 1 ELSE 0 END) AS Rows_Excluded_From_Revenue,
 	SUM(CASE WHEN NullOrMissingID = 0 THEN 1 ELSE 0 END) AS Rows_Included_In_Customer_Analysis,
-	100.0 * SUM(CASE WHEN IsCancelled = 0 AND NegativeQuantityNotCancelled = 0 AND Quantity > 0 AND UnitPrice > 0 THEN 1 ELSE 0 END) / COUNT(*) AS Percent_Valid_Sales,
-	100.0 * SUM(CASE WHEN IsCancelled = 1 THEN 1 ELSE 0 END) / COUNT(*) AS Percent_Cancelled,
-	100.0 * SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) / COUNT(*) AS Percent_Missing_CustomerID
+	SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) AS Missing_CustomerID_Rows,
+	CAST(SUM(CASE WHEN IsCancelled = 0 AND NegativeQuantityNotCancelled = 0 AND Quantity > 0 AND UnitPrice > 0 THEN 1 ELSE 0 END) AS DECIMAL(10, 2)) / CAST(COUNT(*) AS DECIMAL(10, 2)) AS Percent_Valid_Sales,
+	CAST(SUM(CASE WHEN IsCancelled = 1 THEN 1 ELSE 0 END) AS DECIMAL(10, 2)) / CAST(COUNT(*) AS DECIMAL(10, 2)) AS Percent_Cancelled,
+	CAST(SUM(CASE WHEN NullOrMissingID = 1 THEN 1 ELSE 0 END) AS DECIMAL(10, 2)) / CAST(COUNT(*) AS DECIMAL(10, 2)) AS Percent_Missing_CustomerID
 
 FROM
 	dbo.sales_clean;

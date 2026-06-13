@@ -196,4 +196,20 @@ UCI Online Retail dataset
   - Dates
   - Country
   - CustomerID
- 
+
+### 6/13
+- Began creation of page 4 Data Quality Summary
+- Edited sql05 dashboard_data_quality_summary view to have the percentages casted as decimal to help PowerBI display them correctly
+- Added measure of number of rows missing customerID to sql05 dashboard_data_quality_summary view
+- Edited sql05 dashboard_data_quality_summary view invalid price metric to include sales with a price equal to or less than 0 instead of strictly less than 
+- Created numerous KPI cards to display different aspects of the data quality:
+  - Cleaned Rows
+  - Valid Sales Rows
+  - Rows Missing CustomerID
+  - Rows Excluded From Revenue
+  - Percent Valid Sales
+  - Percent Missing CustomerID
+  - Negative Quantity Not Cancelled Rows
+  - Invalid Unit Price Rows
+- Added a text box to page 4 to show the data cleaning rules used in the project
+- Finished page 4 and dashboard creation
