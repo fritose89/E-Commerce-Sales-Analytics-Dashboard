@@ -193,4 +193,5 @@
 - Added a text box to page 4 to show the data cleaning rules used in the project
 - Finished page 4 and dashboard creation
 - Created PROGRESS_LOG.md to hold the status updates on the project and removed these from the README.md
+- Added screenshots of all dashboard pages to screenshots directory
 - 
