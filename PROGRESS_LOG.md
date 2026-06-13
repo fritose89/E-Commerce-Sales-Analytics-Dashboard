@@ -194,4 +194,5 @@
 - Finished page 4 and dashboard creation
 - Created PROGRESS_LOG.md to hold the status updates on the project and removed these from the README.md
 - Added screenshots of all dashboard pages to screenshots directory
-- 
+- Completed README with a Data Cleaning summary section and a Key Findings section
+- I am considering adding a REPORT.md file to further elaborate on the findings

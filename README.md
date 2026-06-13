@@ -66,4 +66,3 @@ The raw data set was first brought into Excel to convert the data from .xlsx to 
 - Cancellations resulted in $897K in lost revenue across 4K orders
 - About 24.9% of all sales were missing a CustomerID these rows are not included in customer-level analysis
 - Out of around 542K rows of data around 530K rows are considered valid from the cleaning rules
-- Greater detailed findings can be found in REPORT.md
