@@ -22,16 +22,16 @@ UCI Online Retail dataset
 ## Dashboard Preview and Screenshots
 
 ### Page 1 - Executive Sales Overview
-![Executive Sales Overview] (dashboard/screenshots/dashboard_page_1_executive_overview.png)
+![Executive Sales Overview](dashboard/screenshots/dashboard_page_1_executive_overview.png)
 
 ### Page 2 - Product and Customer Analysis
-![Product and Customer Analysis] (dashboard/screenshots/dashboard_page_2_product_and_customer_analysis.png
+![Product and Customer Analysis](dashboard/screenshots/dashboard_page_2_product_and_customer_analysis.png
 )
 
 ### Page 3 - Cancellation Impact
-![Cancellation Impact] (dashboard/screenshots/dashboard_page_3_cancellation_impact.png
+![Cancellation Impact](dashboard/screenshots/dashboard_page_3_cancellation_impact.png
 )
 
 ### Page 4 - Data Quality Summary
-![Data Quality Summary] (dashboard/screenshots/dashboard_page_4_data_quality_summary.png
+![Data Quality Summary](dashboard/screenshots/dashboard_page_4_data_quality_summary.png
 )
